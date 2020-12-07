@@ -1,0 +1,18 @@
+extends layout
+
+block content
+
+  section.jumbotron.text-center
+    .container
+      h1 Onze Pakketten
+      p.lead.text-muted
+        | De onderstaande pakketten zijn bereid door de jin en de leidingsgroep van onze scouts. Alle ingredienten zijn vers en lokaal gekocht, zo steun je onrechtstreeks ook de merelbeekse handelaars. De bereiding gebeurde op de klassieke manier, onder leiding van Tim Seranne.
+      p
+
+  .container
+    .row
+      each packet, i in packets
+        .col-lg-4.text-center
+          h3= packet.title
+          img.img-fluid(src= 'images/' + packet.image_link + '.jpg' alt= packet.title width='400')
+          p.lead.text-muted= packet.description

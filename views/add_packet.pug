@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    h1 #{title}
+    form(method = 'POST', action = '/packets/add')
+        #form-group
+            label Gerecht:
+            input.form-control(name = 'title', type = 'text')
+        #from-group
+            label Prijs:
+            input.form-control(name = 'price', type = 'text')
+        #from-group
+            label Beschrijving:
+            textarea.form-control(name = 'description', type = 'test')
+        br
+        input.btn.btn-primary(type = 'submit', value = 'Submit')

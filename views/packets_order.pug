@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1 #{title}
+  ul.list-group
+    each packet, i in packets
+      li.list-group-item
+        a(href = "/packets/" + packet._id)= packet.title

@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    h1 #{title}
+    form(method = 'POST', action = '/packets/edit/' + packet._id)
+        #form-group
+            label Title:
+            input.form-control(name = 'title', type = 'text', value = packet.title)
+        #from-group
+            label Price:
+            input.form-control(name = 'price', type = 'text', value = packet.price)
+        #from-group
+            label Description:
+            textarea.form-control(name = 'description', value = packet.description)
+        br
+        input.btn.btn-primary(type = 'submit', value = 'Submit')

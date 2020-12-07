@@ -1,0 +1,20 @@
+extends layout
+
+block content
+
+  section.jumbotron.text-center
+    .container
+      h1 Opkomende Evenementen
+      p.lead.text-muted
+        | Op deze pagina zie je een klein overzichtje van de opkomende evenementen, voor meer informatie breng je best een bezoekje aan de site van Scouts Hubertus Merelbeke.
+      
+
+  .container
+    .row
+      each event, i in events
+        .col-lg-4.text-center
+          h3= event.title
+          img.img-fluid(src= 'images/' + event.title + '.jpg' alt= event.title width='400')
+          p.lead.text-muted= event.description
+          p.lead.text-muted= event.due_back_formatted
+          p= event.title
